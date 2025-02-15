@@ -1,5 +1,5 @@
-const apiKey = 'CVQ0S52OGI2R8510';  // Sua chave da API da Alpha Vantage
-const acoes = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA']; // Símbolos das ações
+const apiKey = 'CVQ0S52OGI2R8510';  
+const acoes = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA','FB','NVDA','NFLX','SPY','BTC','ETH','XRP','LTC','DOGE','ADA','SOL','MATIC','BCH','XAU/USD','XAG/USD'];
 
 async function buscarDadosAcao(simbolo) {
     try {
