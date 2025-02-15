@@ -36,7 +36,6 @@ function preencherTabela(simbolo, dados) {
 
     linha.innerHTML = `
         <td>${simbolo}</td>
-        <td>${simbolo}</td>
         <td>${dados['1. open']}</td>
         <td>${dados['4. close']}</td>
         <td>${dados['5. volume']}</td>

@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados da Ação</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1><span>DCS</span>Currency</h1>
+    <div class="search-container">
+        <input type="text" placeholder="Pesquise aqui" class="search-input">
+        <button class="search-button">
+            <i class="fas fa-search"></i> <!-- Ícone da lupa -->
+        </button>
+    </div>
     <table id="tabela-acoes">
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Símbolo</th>
                 <th>Preço de Abertura</th>
                 <th>Preço de Fechamento</th>
                 <th>Volume</th>
             </tr>
         </thead>
         <tbody>
-            <td>${simbolo}</td>
             <td>${simbolo}</td>
             <td>${simbolo}</td>
             <td>${simbolo}</td>

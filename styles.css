@@ -12,11 +12,13 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 table{
     background-color: #ccc;
-    margin: 20px 10% 0 10%;
+    margin: 10px;
+    width: 70%;
     box-shadow: 1px 2px 5px #ccc;
 }
 
@@ -47,4 +49,90 @@ td{
     background-color: #000d1f;
     color: #fff;
     text-align: center;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;  
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    background-color: #000d1f;
+    margin: 10px;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-button {
+    position: absolute;
+    right: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button i {
+    font-size: 20px;
+    color: #14a00b;  /* Cor verde para a lupa */
+}
+
+/* Efeito no botão quando passar o mouse */
+.search-button:hover i {
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 90%;
+        margin:auto;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        width: 60%;
+        margin: 10px;
+    }
+
+    th, td {
+        padding: 6px;  /* Menos espaçamento para telas pequenas */
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 400px){
+    table {
+        width: 40%;
+        margin: 10px;
+    }
+    th, td {
+        padding: 2px;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
 }
