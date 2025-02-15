@@ -1,5 +1,5 @@
 const apiKey = 'CVQ0S52OGI2R8510';  
-const acoes = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA','FB','NVDA','NFLX','SPY','BTC','ETH','XRP','LTC','DOGE','ADA','SOL','MATIC','BCH','XAU/USD','XAG/USD'];
+const acoes = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA','FB','NVDA','NFLX','SPY','INTC','USD'];
 
 async function buscarDadosAcao(simbolo) {
     try {
