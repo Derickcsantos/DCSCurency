@@ -51,5 +51,30 @@ async function buscarAcoes() {
     }
 }
 
+document.querySelector('.search-button').addEventListener('click', function() {
+    const searchTerm = document.querySelector('.search-input').value.toLowerCase();
+    const table = document.getElementById('tabela-acoes').getElementsByTagName('tbody')[0];
+    const rows = table.getElementsByTagName('tr');
+    let found = false;
+
+    for (let i = 0; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        if (cells[0].innerText.toLowerCase() === searchTerm) {
+            const firstRow = table.insertRow(0);
+            for (let j = 0; j < cells.length; j++) {
+                const newCell = firstRow.insertCell(j);
+                newCell.innerHTML = cells[j].innerHTML;
+            }
+            table.deleteRow(i + 1);
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        alert('Item não encontrado na tabela.');
+    }
+});
+
 // Chama a função para buscar os dados das ações assim que a página carregar
 buscarAcoes();
