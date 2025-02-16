@@ -55,34 +55,43 @@ h1 {
 
 h1 span {
     color: #14a00b;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 table {
     background-color: #ccc;
     width: 100%;
-    max-width: 1200px;  /* Limita a largura máxima da tabela */
-    margin: 0 auto;  /* Centraliza a tabela */
+    max-width: 100%;  /* Limita a largura máxima da tabela */
+    margin: 0 auto;   /* Centraliza a tabela */
     table-layout: fixed;
+    overflow-x: hidden; 
+    z-index: 999;
 }
+
 
 th {
     color: #fff;
     padding: 10px;
     text-align: left;
+    z-index: 999;
 }
 
 tr {
     background-color: #000d1f;
+    z-index: 999;
+
 }
 
 tbody {
     background-color: #fff;
+    z-index: 999;
 }
 
 td {
     background-color: #000d1f;
     color: #fff;
     text-align: center;
+    z-index: 999;
     padding: 10px;
 }
 
@@ -91,7 +100,7 @@ td {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     margin-bottom: 10px;
 }
 
@@ -128,33 +137,58 @@ td {
     color: #000;
 }
 
+footer {
+    background-color: #000d1f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-top: 70px;
+    z-index: 1;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsividade para telas menores (400px ou menos) */
 @media (max-width: 400px) {
     table {
-        width: 90%;
-        margin: 10px;
+        width: 100%;
+        margin: 20px 0;
     }
-    
+
     th, td {
-        padding: 5px;
+        padding: 8px; /* Reduz o padding para telas menores */
+        font-size: 14px;
     }
 
     h1 {
-        font-size: 1em;
+        font-size: 1.2em; /* Ajusta o tamanho da fonte para telas pequenas */
     }
 }
 
-/* Media Query para telas grandes (720px ou mais) */
+/* Responsividade para telas médias (500px ou mais) */
 @media (min-width: 500px) {
     table {
-        width: auto; /* Ajuste a largura automaticamente */
-        max-width: 100%; /* Limita a largura da tabela */
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
     }
 }
 
-/* Media Query para telas muito grandes (1200px ou mais) */
+/* Responsividade para telas grandes (1200px ou mais) */
 @media (min-width: 1200px) {
     table {
-        width: auto; /* Ajuste a largura automaticamente */
-        max-width: 100%;
+        max-width: 1200px; /* Limita a largura máxima da tabela */
+    }
+
+    th, td {
+        padding: 12px;
     }
 }
