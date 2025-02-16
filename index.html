@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados da Ação</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
+
+    <div class="botoes">
+        <button id="btnAlphaVantage"><span class="flag-icon flag-icon-us"></span></button>
+        <button id="btnBrasil"><span class="flag-icon flag-icon-br"></span></button>
+        <button id="btnCripto"><i class="fab fa-bitcoin"></i></button>
+    </div>
+
+
+    
     <h1><span>DCS</span>Currency</h1>
     <div class="search-container">
         <input type="text" placeholder="Pesquise aqui" class="search-input">
@@ -15,20 +25,51 @@
             <i class="fas fa-search"></i> <!-- Ícone da lupa -->
         </button>
     </div>
-    <table id="tabela-acoes">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Preço de Abertura</th>
-                <th>Preço de Fechamento</th>
-                <th>Volume</th>
-            </tr>
-        </thead>
-        <tbody>
-           
-        </tbody>
-    </table>
+   <!-- Tabela de Ações Alpha Vantage -->
+<table id="tabela-acoes-alphaVantage" style="display:none;">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço de Abertura</th>
+            <th>Preço de Fechamento</th>
+            <th>Volume</th>
+        </tr>
+    </thead>
+    <tbody>
 
-    <script src="script.js"></script>
+    </tbody>
+</table>
+
+<!-- Tabela de Ações Brasileiras -->
+<table id="tabela-acoes-brasil" style="display:block;">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Maior valor negociado</th>
+            <th>Menor valor negociado</th>
+            <th>Volume</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+<table id="tabela-acoes-cripto" style="display:none;">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço (USD)</th>
+            <th>Máximo de 24h</th>
+            <th>Mínimo de 24h</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+
+    <script src="src/js/script.js"></script>
 </body>
 </html>
